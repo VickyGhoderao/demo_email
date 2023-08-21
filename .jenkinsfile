@@ -1,7 +1,12 @@
 node('main') 
-{   
+{
+
     try 
-    { 
+    {
+      agent{
+        label 'linux'
+    }
+     
         stage ('Checkout') 
         { 
             deleteDir()
